@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13527"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" id="gTV-IL-0wX" customClass="ZQPublicPhotoCell">
+            <rect key="frame" x="0.0" y="0.0" width="77" height="77"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="77" height="77"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="Id2-wg-nvh">
+                        <rect key="frame" x="0.0" y="0.0" width="77" height="77"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="boolean" keyPath="layer.masksToBounds" value="YES"/>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fIc-W6-Bf6">
+                        <rect key="frame" x="58" y="0.0" width="19" height="22"/>
+                        <state key="normal" image="删除"/>
+                        <connections>
+                            <action selector="deletePhoto:" destination="gTV-IL-0wX" eventType="touchUpInside" id="AZZ-pP-Sxd"/>
+                        </connections>
+                    </button>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="RoE-pz-xIX">
+                        <rect key="frame" x="0.0" y="52" width="77" height="25"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" flexibleMinY="YES"/>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <nil key="textColor"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="Id2-wg-nvh" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="3B2-Rq-1b9"/>
+                <constraint firstAttribute="bottom" secondItem="Id2-wg-nvh" secondAttribute="bottom" id="3Du-BP-l7N"/>
+                <constraint firstItem="fIc-W6-Bf6" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="5hS-Fp-BXD"/>
+                <constraint firstAttribute="trailing" secondItem="fIc-W6-Bf6" secondAttribute="trailing" id="E8N-5s-8FK"/>
+                <constraint firstAttribute="trailing" secondItem="Id2-wg-nvh" secondAttribute="trailing" id="KYD-69-gox"/>
+                <constraint firstItem="Id2-wg-nvh" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="t4d-kC-88s"/>
+            </constraints>
+            <size key="customSize" width="77" height="77"/>
+            <connections>
+                <outlet property="deleteButton" destination="fIc-W6-Bf6" id="Mew-hL-tWU"/>
+                <outlet property="introLabel" destination="RoE-pz-xIX" id="wc5-8t-9H8"/>
+                <outlet property="photoView" destination="Id2-wg-nvh" id="jRr-av-MCW"/>
+            </connections>
+            <point key="canvasLocation" x="47.5" y="40.5"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="删除" width="19" height="22"/>
+    </resources>
+</document>

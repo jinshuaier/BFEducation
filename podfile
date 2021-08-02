@@ -1,0 +1,17 @@
+platform:ios,'8.0'
+target "Bf" do
+pod 'IQKeyboardManager'
+pod 'MJExtension'
+pod 'SVProgressHUD'
+pod 'MBProgressHUD'
+pod 'MJRefresh'
+pod 'SDWebImage', '~> 3.7'
+pod 'AFNetworking'
+pod 'FMDB'
+pod 'MJPhotoBrowser', '~> 1.0.2'
+pod 'Reachability'
+pod 'GPUImage', '~> 0.1.7'
+pod 'SDAutoLayout'
+pod 'Bugly'
+pod 'Masonry'
+end

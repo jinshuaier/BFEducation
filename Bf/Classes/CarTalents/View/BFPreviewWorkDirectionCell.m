@@ -1,0 +1,96 @@
+//
+//  BFPreviewWorkDirectionCell.m
+//  Bf
+//
+//  Created by 陈大鹰 on 2018/3/27.
+//  Copyright © 2018年 陈大鹰. All rights reserved.
+//
+
+#import "BFPreviewWorkDirectionCell.h"
+
+@implementation BFPreviewWorkDirectionCell
+
+-(instancetype)initWithStyle:(UITableViewCellStyle)style reuseIdentifier:(NSString *)reuseIdentifier {
+    if (self = [super initWithStyle:style reuseIdentifier:reuseIdentifier]) {
+        [self addSubview:self.degree];
+        [self addSubview:self.degree1];
+        [self addSubview:self.work];
+        [self addSubview:self.work1];
+        [self addSubview:self.birth];
+        [self addSubview:self.birth1];
+    }
+    return self;
+}
+
+-(void)layoutSubviews {
+    self.degree.frame = CGRectMake(15, 15, 60, 15);
+    self.degree1.frame = CGRectMake(self.degree.right + 15, 15, 200, 15);
+    
+    self.work.frame = CGRectMake(15, self.degree.bottom + 20, 60, 15);
+    self.work1.frame = CGRectMake(self.work.right + 15, self.degree1.bottom + 20, 200, 15);
+    
+    self.birth.frame = CGRectMake(15, self.work.bottom + 20, 60, 15);
+    self.birth1.frame = CGRectMake(self.birth.right + 15, self.work1.bottom + 20, 200, 15);
+}
+
+-(UILabel *)degree {
+    if (!_degree) {
+        _degree = [[UILabel alloc] init];
+        _degree.text = @"期望职位";
+        _degree.textColor = RGBColor(144, 144, 144);
+        _degree.font = [UIFont fontWithName:BFfont size:14.0f];
+    }
+    return _degree;
+}
+
+-(UILabel *)degree1 {
+    if (!_degree1) {
+        _degree1 = [[UILabel alloc] init];
+        _degree1.text = @"汽车美容师";
+        _degree1.textColor = RGBColor(0, 0, 0);
+        _degree1.font = [UIFont fontWithName:BFfont size:14.0f];
+    }
+    return _degree1;
+}
+
+-(UILabel *)work {
+    if (!_work) {
+        _work = [[UILabel alloc] init];
+        _work.text = @"期望薪资";
+        _work.textColor = RGBColor(144, 144, 144);
+        _work.font = [UIFont fontWithName:BFfont size:14.0f];
+    }
+    return _work;
+}
+
+-(UILabel *)work1 {
+    if (!_work1) {
+        _work1 = [[UILabel alloc] init];
+        _work1.text = @"6000-8000";
+        _work1.textColor = RGBColor(0, 0, 0);
+        _work1.font = [UIFont fontWithName:BFfont size:14.0f];
+    }
+    return _work1;
+}
+
+-(UILabel *)birth {
+    if (!_birth) {
+        _birth = [[UILabel alloc] init];
+        _birth.text = @"求职区域";
+        _birth.textColor = RGBColor(144, 144, 144);
+        _birth.font = [UIFont fontWithName:BFfont size:14.0f];
+    }
+    return _birth;
+}
+
+-(UILabel *)birth1 {
+    if (!_birth1) {
+        _birth1 = [[UILabel alloc] init];
+        _birth1.text = @"北京丰台区";
+        _birth1.textColor = RGBColor(0, 0, 0);
+        _birth1.font = [UIFont fontWithName:BFfont size:14.0f];
+    }
+    return _birth1;
+}
+
+@end

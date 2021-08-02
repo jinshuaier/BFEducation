@@ -1,0 +1,80 @@
+//
+//  PrefixHeader.pch
+//  Bf
+//
+//  Created by 陈大鹰 on 2017/12/12.
+//  Copyright © 2017年 陈大鹰. All rights reserved.
+//
+
+#ifndef PrefixHeader_pch
+#define PrefixHeader_pch
+
+// Include any system framework and library headers here that should be included in all compilation units.
+// You will also need to set the Prefix Header build setting of one or more of your targets to reference this file.
+
+#ifdef __OBJC__
+
+#import <UIKit/UIKit.h>
+#import <Foundation/Foundation.h>
+#import "Api.h"
+#import "Config.h"
+
+//导入头文件
+#import "UIView+CCFrame.h"
+#import "UIBarButtonItem+CCExtension.h"
+#import "ClearCache.h"
+#import "RegularExpression.h"
+#import <CCPush/CCPushUtil.h>
+#import <CCPush/PushParameters.h>
+#import "NetworkRequest.h"
+#import <SDAutoLayout.h>
+#import "QBImagePickerController.h"
+#import <MediaPlayer/MediaPlayer.h>
+#import <AVFoundation/AVFoundation.h>
+#import <QuartzCore/QuartzCore.h>
+#import "JWPlayer.h"
+#import <AssetsLibrary/AssetsLibrary.h>
+#import "ZQDialogueViewController.h"
+#import "ZQCommonDialogueController.h"
+#import "ClearCache.h"
+#import "DWUploadInfoSetupViewController.h"
+#import "DWUploadTableViewCell.h"
+#import "DWUploadItem.h"
+#import "DWTools.h"
+#import "InformationShowView.h"
+#import <MobileCoreServices/MobileCoreServices.h>
+#import "ZAlertView.h"
+#import "BFPlaySound.h"
+#import "NSString+Extension.h"
+#import <SDWebImage/UIImageView+WebCache.h>
+#import <MJRefreshHeader.h>
+#import <MJRefresh/MJRefreshNormalHeader.h>
+#import <MJRefresh/MJRefreshAutoStateFooter.h>
+#import "ZQInvalidWordsManager.h"
+#import "BFLoginViewController.h"
+#import "CCSDK/CCLiveUtil.h"
+#import "CCSDK/RequestDataPlayBack.h"
+#import "CCSDK/RequestData.h"
+#import <UMShare/UMShare.h>
+#import <UShareUI/UShareUI.h>
+//#import <UMCommon/UMCommon.h>
+//#import <UMPush/UMessage.h>
+#import <UserNotifications/UserNotifications.h>
+#import <UMCommonLog/UMCommonLogHeaders.h>
+//#import <UMAnalytics/MobClick.h>
+#import "AppDelegate.h"
+#import "PickerChoiceView.h"
+#import "CitysPickerView.h"
+#import "UILabel+MBCategory.h"
+#import "BFMenuView.h"
+#import "AFHTTPSessionManager.h"
+#import "BFUUIDManager.h"
+#import "BFAppKeyChain.h"
+
+
+#import "UIView+HBExtension.h"
+
+#endif
+
+
+#endif /* PrefixHeader_pch */
